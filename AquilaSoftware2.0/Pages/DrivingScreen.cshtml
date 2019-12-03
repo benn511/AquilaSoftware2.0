@@ -1,0 +1,25 @@
+﻿@page
+@model AquilaSoftware2._0.Pages.DrivingScreenModel
+@{
+    ViewData["Title"] = "DrivingScreen";
+}
+
+<link rel="stylesheet" href="~/css/drivingScreen.css" />
+
+
+
+<div class="d-flex flex-column bd-highlight">
+    <canvas class="car-info" id="speed-canvas"></canvas>
+
+    <div class="car-info" id="battery-info">
+        Range: 200 miles
+        
+        <div id="battery"></div>
+
+    </div>
+</div>
+
+<script src="~/js/drivingScreen.js" asp-append-version="true"></script>
+
+
+

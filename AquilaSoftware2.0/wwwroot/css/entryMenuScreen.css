@@ -1,0 +1,22 @@
+﻿
+html {
+    height: 100%;
+    width: 100%;
+}
+body {
+    margin: 0px;
+    background-color: black;
+}
+.col {
+    padding: 0px;
+}
+
+.row, .btn {
+    
+    margin: 0px;
+    height: 50vh;
+    line-height: 50vh;
+}
+
+
+
