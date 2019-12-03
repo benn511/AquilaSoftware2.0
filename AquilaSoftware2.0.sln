@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29509.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AquilaSoftware2.0", "AquilaSoftware2.0\AquilaSoftware2.0.csproj", "{66B283E3-ABD1-47DB-83D4-F7A7B487E716}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{66B283E3-ABD1-47DB-83D4-F7A7B487E716}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66B283E3-ABD1-47DB-83D4-F7A7B487E716}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66B283E3-ABD1-47DB-83D4-F7A7B487E716}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66B283E3-ABD1-47DB-83D4-F7A7B487E716}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B625A8D4-FD19-4144-ADA1-2FDBEF1B7BE1}
+	EndGlobalSection
+EndGlobal
