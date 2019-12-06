@@ -13,7 +13,7 @@ namespace AquilaSoftware2._0.Pages
     {
         public void OnGet()
         {
-            var counter = 1;
+            
         }
         private readonly IHubContext<Comms> serialComms;
         public MediaScreenModel(IHubContext<Comms>comms)

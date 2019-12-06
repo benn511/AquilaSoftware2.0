@@ -15,42 +15,46 @@
 
 </head>
 <body>
-   
+
     <div class="container">
-        
-            @RenderBody()
-        
+
+        @RenderBody()
+
     </div>
 
     <footer id="statusBar" class="bg-dark text-white fixed-bottom">
-            <div class="d-flex justify-content-around bd-highlight ">
-                <div class="p-2 info-button">
-                    <a class="btn btn-dark btn btn-block" asp-page="/DrivingScreen">
-                        <div id="speed">
-                            30mph<i class="fa fa-car" style="font-size:24px;"></i>
-                        </div>
-                    </a>
-                </div>
-                <div class="p-2 info-button">
-                    <a class="btn btn-dark btn btn-block" asp-page="/EntryMenuScreen">
-                        <div id="time">
-                            12:00<i class="fas fa-home" style="font-size:24px;"></i>
-                        </div>
-                    </a>
-                </div>
-                <div class="p-2 info-button">
-                    <a class="btn btn-dark btn btn-block" asp-page="/MediaScreen">
-                        <div id="songname">
-                            Song<i class="fa fa-music" style="font-size:24px;"></i>
-                        </div>
-                    </a>
-                </div>
+        <div class="d-flex justify-content-around bd-highlight ">
+            <div class="p-2 info-button">
+                <a class="btn btn-dark btn btn-block" asp-page="/DrivingScreen">
+                    <div id="speed">
+                        30mph<i class="fa fa-car" style="font-size:24px;"></i>
+                    </div>
+                </a>
             </div>
+            <div class="p-2 info-button">
+                <a class="btn btn-dark btn btn-block" asp-page="/EntryMenuScreen">
+                    <div id="time">
+                        12:00<i class="fas fa-home" style="font-size:24px;"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="p-2 info-button">
+                <a class="btn btn-dark btn btn-block" asp-page="/MediaScreen">
+                    <div id="songname">
+                        Song<i class="fa fa-music" style="font-size:24px;"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
     </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/lib/aspnet/signalr/dist/browser/signalr.js"></script>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+
+
 
     @RenderSection("Scripts", required: false)
 </body>

@@ -56,7 +56,7 @@ namespace AquilaSoftware2._0
 
             app.UseSignalR(routes =>
             {
-                routes.MapHub<Comms>("/Comms");
+                routes.MapHub<Comms>("/Hubs/Comms");
             });
 
         }

@@ -10,10 +10,9 @@ namespace AquilaSoftware2._0.Hubs
 {
     public class Comms : Hub
     {
-        public Task Send(string messageText)
+        public async Task ReceiveMessage(string user,string message)
         {
-            var sender = Context.User?.Identity?.Name ?? "anonymous";
-            return Clients.All.SendAsync("newMessage", sender, messageText);
+            await Clients.All.SendAsync("ReceiveMessage",user,message);
         }
     }
 }

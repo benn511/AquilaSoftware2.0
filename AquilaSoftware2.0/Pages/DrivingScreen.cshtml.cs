@@ -12,7 +12,6 @@ namespace AquilaSoftware2._0.Pages
     public class DrivingScreenModel : PageModel
     {
         private readonly ILogger<PrivacyModel> _logger;
-        private int test;
 
         public DrivingScreenModel(ILogger<PrivacyModel> logger)
         {
