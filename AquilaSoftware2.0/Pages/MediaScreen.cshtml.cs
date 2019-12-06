@@ -13,12 +13,20 @@ namespace AquilaSoftware2._0.Pages
     {
         public void OnGet()
         {
-
+            var counter = 1;
         }
         private readonly IHubContext<Comms> serialComms;
         public MediaScreenModel(IHubContext<Comms>comms)
         {
+            //Invoke method
+            //Using class event to subscribe to event raised from backend
             serialComms = comms;
+        }
+
+        public async void RecieveMessage(string message1,string message2)
+        {
+            //Using hubcontext to send runtime data to the page via the signalR hub
+            await serialComms.Clients.All.SendAsync("ReceiveMessage", message1, message2);
         }
     }
 }
