@@ -9,11 +9,17 @@ $('#test').click(function (func) {
     connection.invoke("ReceiveMessage", "Testing string 1", "Testing string 2")
         .catch(err => console.error(err.toString()));
 });
-    
-//Wires function to listen to the new message event evoked by server
-connection.on('ReceiveMessage', function (msg1,msg2) {
-    console.log(msg1,msg2);
+
+connection.on('Request',function (valueFromServ){
+    console.log(valueFromServ);
 })
 
 console.log('connecting...');
 connection.start()
+
+var pingServer = setInterval(myTimer,500);
+
+function myTimer()
+{
+    connection.invoke("Request").catch(err=>console.error(err.toString()));
+}

@@ -13,10 +13,10 @@ namespace AquilaSoftware2._0.Pages
     {
         public void OnGet()
         {
-            
+
         }
         private readonly IHubContext<Comms> serialComms;
-        public MediaScreenModel(IHubContext<Comms>comms)
+        public MediaScreenModel(IHubContext<Comms> comms)
         {
             //Invoke method
             //Using class event to subscribe to event raised from backend
