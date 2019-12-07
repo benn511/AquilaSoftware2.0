@@ -1,6 +1,33 @@
 ﻿'use strict';
 
 
+//Build a hub connection with the url /mediascreen
+const connection = new signalR.HubConnectionBuilder()
+    .withUrl("/Hubs/Comms")
+    .build();
+
+$('#test').click(function (func) {
+    func.preventDefault();
+    console.log("Clicked");
+    connection.invoke("ReceiveMessage", "Testing string 1", "Testing string 2")
+        .catch(err => console.error(err.toString()));
+});
+
+connection.on('Request', function (valueFromServ) {
+    var carValues = jQuery.parseJSON(valueFromServ);
+    console.log(valueFromServ);
+    setSpeed(40);
+})
+
+console.log('connecting...');
+connection.start()
+
+var pingServer = setInterval(myTimer, 500);
+
+function myTimer() {
+    connection.invoke("Request").catch(err => console.error(err.toString()));
+}
+
 
 
 /*
@@ -8,9 +35,6 @@
 GitHub: https://github.com/tameemi/tesla-speedometer
 */
 
-
-//let t0 = 0;
-//let t1 = 0;
 
 var c = document.getElementById("speed-canvas");
 c.width = 500;
@@ -209,11 +233,11 @@ function drawSpeedo(speed, gear, rpm, topSpeed) {
 }
 
 
-function setSpeed() {
+function setSpeed(speed) {
     let speedM = 0;
     let gear = 0;
     let rpm = 0;
-    setInterval(function () {
+   
         if (speedM > 160) {
             speedM = 0;
             rpm = 0;
@@ -230,22 +254,14 @@ function setSpeed() {
             gear = 5;
         }
 
-        speedM++;
+        speedM=speed;
         if (rpm < 1) {
             rpm += .03;
         }
         drawSpeedo(speedM, gear, rpm, 160);
-
-    }, 40);
-
 }
 
-document.addEventListener('DOMContentLoaded', function () {
 
-    //setInterval(setSpeed, 2000)
-    setSpeed();
-    //drawSpeedo(120,4,.8,160);
-}, false);
 
 
 
