@@ -62,5 +62,11 @@ namespace AquilaSoftware2._0.Hubs
             return json;
         }
 
+        public void ActivateBT()
+        {
+            //Turn BT stream on using c# library
+            Console.WriteLine("BT on");
+        }
+
     }
 }
