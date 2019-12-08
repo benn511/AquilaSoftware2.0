@@ -13,7 +13,7 @@
 .info-button {
     flex: 0 0 auto;
 }
-#songname, #time, #speed {
+.nav-items {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -25,11 +25,6 @@ html {
 #statusBar {
     background: rgb(149,158,171);
     background: linear-gradient(180deg, rgba(86,91,98,1) 0%, rgba(65,69,74,1) 27%, rgba(66,62,62,1) 100%);
-}
-@media (min-width: 768px) {
-    html {
-    font-size: 16px;
-  }
 }
 
 

@@ -5,5 +5,5 @@
 });
  
 
-$("#time").append(date)
+$(".nav-item.time").append(date)
 console.log(date)
