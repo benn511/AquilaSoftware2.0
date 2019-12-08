@@ -4,13 +4,48 @@
     ViewData["Title"] = "MediaScreen";
 }
 
-<button id="test">Test</button>
-<button id="bt">BT Connect</button>
+    <html>
+    <head>
+        <script src="jquery-1.10.2.min.js"></script>
+        <link href="~/mediaScreen/Main.css" rel="stylesheet" />
+        
 
-<h2 class="msg2"></h2>
+    </head>
+    <body>
+        <div id="bg">
+            <div id="blackLayer"></div>
+            <img src="" />
+        </div>
+
+        <div id="main">
+            <div id="image">
+                <img src="" />
+            </div>
+            <div id="player">
+                <div id="songTitle">Demo</div>
+                <div id="buttons">
+                    <button id="pre" onclick="pre()"><img src="~/mediaScreen/Pre.png" height="90%" width="90%" /></button>
+                    <button id="play" onclick="playOrPauseSong()"><img src="~/mediaScreen/Play.png" /></button>
+                    <button id="next" onclick="next()"><img src="~/mediaScreen/Next.png" height="90%" width="90%" /></button>
+                </div>
+
+                <div id="songSlider" class="song-slider" type="range" min="0" step="1" onchange="seekSong()">
+                    <div id="fill"></div>
+                    <div id="handle"></div>
+                </div>
+                <div id="currentTime" class="current-time"></div>
+                <div id="duration" class="duratio"></div>
+
+            </div>
+        </div>
+
+       <!-- <script src="~/js/mediaScreen.js" asp-append-version="true"></script>-->
+        <script src="~/js/mediaplayer.js" asp-append-version="true"></script>
+    </body>
 
 
-<script src="~/lib/signalr/signalr.js"></script>
-<script src="~/lib/jquery/dist/jquery.js"></script>
-<script src="~/js/mediaScreen.js" asp-append-version="true"></script>
+
+
+
+    </html>
 
