@@ -8,33 +8,34 @@
     <head>
         <script src="jquery-1.10.2.min.js"></script>
         <link href="~/mediaScreen/Main.css" rel="stylesheet" />
-        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
 
     </head>
     <body>
         <div id="bg">
-            <div id="blackLayer"></div>
-            <img src="" />
+            <img src= "/mediaScreen/Poster1.jpg"/>
         </div>
 
         <div id="main">
             <div id="image">
-                <img src="" />
+                <img src="/mediaScreen/Poster1.jpg" >
             </div>
             <div id="player">
                 <div id="songTitle">Demo</div>
                 <div id="buttons">
-                    <button id="pre" onclick="pre()"><img src="~/mediaScreen/Pre.png" height="90%" width="90%" /></button>
-                    <button id="play" onclick="playOrPauseSong()"><img src="~/mediaScreen/Play.png" /></button>
-                    <button id="next" onclick="next()"><img src="~/mediaScreen/Next.png" height="90%" width="90%" /></button>
+                    <button id="pre" onclick="pre()"><img src="/mediaScreen/Pre.png" height="90%" width="90%" /></button>
+                    <button id="play" onclick="playOrPauseSong()"><img src="/mediaScreen/Pause.png" /></button>
+                    <button id="next" onclick="next()"><img src="/mediaScreen/Next.png" height="90%" width="90%" /></button>
                 </div>
 
                 <div id="songSlider" class="song-slider" type="range" min="0" step="1" onchange="seekSong()">
                     <div id="fill"></div>
                     <div id="handle"></div>
                 </div>
+                <div id="duration" class="duratio">00:00</div>
                 <div id="currentTime" class="current-time"></div>
-                <div id="duration" class="duratio"></div>
+
 
             </div>
         </div>
