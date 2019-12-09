@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-<<head>
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - AquilaSoftware</title>
@@ -15,8 +15,8 @@
 
 </head>
 <body>
-    
-    <div >
+ 
+    <div>
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
@@ -26,14 +26,15 @@
         <div class="d-flex justify-content-around bd-highlight ">
             <div class="p-2 ">
                 <a class="btn btn-dark btn btn-block" asp-page="/DrivingScreen">
-                    <div class="nav-item">
-                        30mph<i class="fa fa-car" style="font-size:24px;"></i>
+                    <div class="d-flex nav-item"><div class="nav-item speed">30mph</div>
+                        <i class="fa fa-car" style="font-size:24px;"></i>
                     </div>
                 </a>
             </div>
             <div class="p-2">
                 <a class="btn btn-dark btn btn-block" asp-page="/EntryMenuScreen">
-                    <div class="nav-item time">
+                    <div class="d-flex flex-row nav-item time">
+                            <div class="hour">3</div>:<div class="minutes">39</div><div class="system"> am </div>
                         <i class="fas fa-home" style="font-size:24px;"></i>
                     </div>
                 </a>

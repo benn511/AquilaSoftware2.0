@@ -5,5 +5,4 @@
 });
  
 
-$(".nav-item.time").append(date)
-console.log(date)
+//$(".nav-item.time").append(date)

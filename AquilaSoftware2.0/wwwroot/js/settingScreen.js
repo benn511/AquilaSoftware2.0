@@ -1,7 +1,7 @@
-﻿var overlay = jQuery('<div id="overlay"> </div>');
+﻿var overlay = jQuery('<div class="overlay"> </div>');
 
 
-$(".settings-btn").mouseup(function () {
+$(".settings-btn").click(function () {
     if ($(".card").is(":hidden")) {
         $(".card." + this.id).show()
         overlay.appendTo($(".list-group"))
@@ -9,10 +9,13 @@ $(".settings-btn").mouseup(function () {
         
 });
 
-$("body").mousedown(function () {
-    if ($(".card").is(":visible")) {
-        $(".card").hide()
+$(document).mousedown(function (e) {
+    var container = $(".card");
+
+    if (!container.is(e.target) && container.has(e.target).length === 0 && container.is(":visible")) {
+        container.hide()
         overlay.remove()
-    }
+        }
+
       
 });

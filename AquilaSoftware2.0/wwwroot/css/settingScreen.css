@@ -1,12 +1,24 @@
-﻿.card{
-    position:fixed;
+﻿.card {
+    background: linear-gradient(180deg, rgb(191, 193, 195) 0%, rgb(103, 104, 105) 80%);
+    ;
+    position: fixed;
     z-index: 10;
     left: 50%;
-     top: 50%;
+    top: 50%;
     transform: translate(-50%, -75%);
-    text-align:center;
-    display:none;
+    text-align: center;
+    display: none;
 }
+.card .card-body {
+    padding: 1rem;
+}
+.card .card-title{
+    margin-top: -0.5rem;
+}
+    .card .card-text {
+        margin-top: 1.5em;
+        font-size: large;
+    }
 
 .list-group{
     z-index: 1;
@@ -24,7 +36,7 @@
 }
 
 
-#overlay {
+.overlay {
     position: fixed;
     top: 0;
     left: 0;

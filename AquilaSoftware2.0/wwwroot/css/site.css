@@ -6,24 +6,20 @@
 }
 
 
-#homebutton {
-    background: transparent url(../sprites/home_icon.png) center top no-repeat;
-    background-size: auto 100%;
-}
-.info-button {
-    flex: 0 0 auto;
-}
-.nav-items {
+.nav-item {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    width: 120px;
+    width: 100px;
+}
+.system{
+    padding: 0 .25rem 0 .25rem;
 }
 html {
   font-size: 14px;
 }
 #statusBar {
-    background: rgb(149,158,171);
+    
     background: linear-gradient(180deg, rgba(86,91,98,1) 0%, rgba(65,69,74,1) 27%, rgba(66,62,62,1) 100%);
 }
 
