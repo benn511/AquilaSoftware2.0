@@ -15,15 +15,16 @@ window.onload = playSong;   // it will call the function playSong when window is
 
 function playSong(){
     
-    song.src = "~/mediaScreen/" + songs[currentSong];  //set the source of 0th song 
+    song.src = "/mediaScreen/" + songs[currentSong];  //set the source of 0th song 
     
     songTitle.textContent = songs[currentSong]; // set the title of song
     
     song.play();    // play the song
+    setTimeout(showDuration, 1000)
 }
 
 setInterval(updateSongSlider, 1000);
-
+showDuration()
 function updateSongSlider () {
     var c = Math.round(song.currentTime);
     songSlider.value = c;
@@ -40,8 +41,9 @@ function convertTime(secs) {
 }
 
 function showDuration() {
+
     var d = Math.floor(song.duration);
-    songSlider.setAttribute("max",d);
+    songSlider.setAttribute('max',d);
     duration.textContent = convertTime(d);
 }
 
@@ -49,11 +51,11 @@ function playOrPauseSong(){
     
     if(song.paused){
         song.play();
-        $("#play img").attr("src", "~/mediaScreen/Pause.png");
+        $("#play img").attr("src", "/mediaScreen/Pause.png");
     }
     else{
         song.pause();
-        $("#play img").attr("src", "~/mediaScreen/Play.png");
+        $("#play img").attr("src", "/mediaScreen/Play.png");
     }
 }
 
@@ -72,9 +74,9 @@ function next(){
         currentSong = 0;
     }
     playSong();
-    $("#play img").attr("src", "~/mediaScreen/Pause.png");
-    $("#image img").attr("src","~/mediaScreen/poster" + [currentSong]);
-    $("#bg img").attr("src","~/mediaScreen/" + poster[currentSong]);
+    $("#play img").attr("src", "/mediaScreen/Pause.png");
+    $("#image img").attr("src","/mediaScreen/" + poster[currentSong]);////////////
+    $("#bg img").attr("src","/mediaScreen/" + poster[currentSong]);
 }
 
 function pre(){
@@ -84,9 +86,9 @@ function pre(){
         currentSong = 2;
     }
     playSong();
-    $("#play img").attr("src","Pause.png");
-    $("#image img").attr("src",poster[currentSong]);
-    $("#bg img").attr("src",poster[currentSong]);
+    $("#play img").attr("src","/mediaScreen/Pause.png");
+    $("#image img").attr("src","/mediaScreen/" + poster[currentSong]);
+    $("#bg img").attr("src", "/mediaScreen/" + poster[currentSong]);
 }
 
 
