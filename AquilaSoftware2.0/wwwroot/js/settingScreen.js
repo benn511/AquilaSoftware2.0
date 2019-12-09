@@ -19,3 +19,10 @@ $(document).mousedown(function (e) {
 
       
 });
+
+// var myElement = $('#myElement');
+// var hammertime = new Hammer(myElement, myOptions);
+// hammertime.on('pan', function(ev) {
+// 	console.log(ev);
+// });
+
