@@ -17,6 +17,7 @@ connection.on('Request', function (valueFromServ) {
     var carValues = jQuery.parseJSON(valueFromServ);
     console.log(valueFromServ);
     setSpeed(40);
+    batteryDemo();
 })
 
 console.log('connecting...');
@@ -303,6 +304,31 @@ function batUpdate() {
     }
     $("#battery").css("background-image", "linear-gradient(to right, transparent 5%, " + col[0] + " 5%, " + col[0] + " 7%, " + col[1] + " 8%, " + col[1] + " 10%, " + col[2] + " 11%, " + col[2] + " " + (charge - 3) + "%, " + col[3] + " " + (charge - 2) + "%, " + col[3] + " " + charge + "%, " + col[4] + " " + charge + "%, black " + (charge + 5) + "%, black 95%, transparent 95%), linear-gradient(to bottom, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.4) 4%, rgba(255,255,255,0.2) 7%, rgba(255,255,255,0.2) 14%, rgba(255,255,255,0.8) 14%, rgba(255,255,255,0.2) 40%, rgba(255,255,255,0) 41%, rgba(255,255,255,0) 80%, rgba(255,255,255,0.2) 80%, rgba(255,255,255,0.4) 86%, rgba(255,255,255,0.6) 90%, rgba(255,255,255,0.1) 92%, rgba(255,255,255,0.1) 95%, rgba(255,255,255,0.5) 98%)");
 }
+var increase = true;
+var mileage = 0;
+window.addEventListener('load', function () {
+    charge = 12;
+    batteryDemo();
+})
+
+function batteryDemo()
+{
+    if (increase) {
+        charge++;
+        mileage += 3;
+        if (charge == 89)
+            increase = false;
+    }
+    else {
+        charge--;
+        mileage -= 3;
+        if (charge == 12)
+            increase = true;
+    }
+    batUpdate();
+    $(".car-info.miles").text(mileage);
+}
+
 function batteryIncrese() {
     if (charge < 89) {
         charge++;
