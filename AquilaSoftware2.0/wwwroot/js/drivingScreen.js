@@ -22,7 +22,7 @@ connection.on('Request', function (valueFromServ) {
 console.log('connecting...');
 connection.start()
 
-var pingServer = setInterval(myTimer, 500);
+var pingServer = setInterval(myTimer, 50);
 
 function myTimer() {
     connection.invoke("Request").catch(err => console.error(err.toString()));
@@ -232,11 +232,11 @@ function drawSpeedo(speed, gear, rpm, topSpeed) {
     ctx.strokeStyle = "#000";
 }
 
-
+let speedM = 0;
+let gear = 0;
+let rpm = 0;
 function setSpeed(speed) {
-    let speedM = 0;
-    let gear = 0;
-    let rpm = 0;
+
    
         if (speedM > 160) {
             speedM = 0;
@@ -254,7 +254,8 @@ function setSpeed(speed) {
             gear = 5;
         }
 
-        speedM=speed;
+        //speedM=speed;
+        speedM+=1;
         if (rpm < 1) {
             rpm += .03;
         }
